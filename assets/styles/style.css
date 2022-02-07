@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: flex;
+  height: 900px;
+  width: 1340px;
+}
+#root .side-menu-container {
+  background-color: #F7E4BB;
+  width: 100px;
+  height: 100%;
+}
+#root .side-menu-container .side-menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  height: 50%;
+}
+#root .side-menu-container .side-menu__spoon-fork-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+  width: 90px;
+  height: 90px;
+  border-radius: 30px 0 0 30px;
+  margin-right: -10px;
+}
+#root .main {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+  width: 70%;
+}
+#root .main .header {
+  display: flex;
+  width: 60%;
+}
+#root .main .header .category-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+  width: 100%;
+}
+#root .main .header .category-name__main {
+  font-size: 36px;
+  color: #EBC060;
+}
+#root .main .header .category-name__add {
+  display: flex;
+  align-items: center;
+  color: #E6AF33;
+  font-size: 24px;
+}
+#root .main .header .category-name__add_icon {
+  margin-right: 25px;
+}
+#root .main .search__name {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+#root .main .explore {
+  display: flex;
+  flex-direction: column;
+}
+#root .main .explore__name {
+  font-size: 36px;
+  color: #9CB82E;
+  margin: 50px 0 30px 0;
+}
+#root .main .explore__filter-container {
+  display: flex;
+  margin: 30px 0;
+}
+#root .main .explore__filter-container_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  min-width: 65px;
+  margin-right: 12px;
+  border-radius: 30px;
+}
+#root .card-info {
+  margin: 30px 60px 0 0;
+  height: 800px;
+  width: 400px;
+  background-color: #F7E4BB;
+  border-radius: 30px;
+  position: relative;
+}
+#root .card-info__img {
+  height: 300px;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.71) 20.83%, rgba(255, 255, 255, 0) 89.58%);
+  border-radius: 30px 30px 0 0;
+}
+#root .card-info__container {
+  height: 500px;
+  width: 80%;
+  border-radius: 30px;
+  background-color: #FFFFFF;
+  position: absolute;
+  bottom: 35px;
+  left: 35px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+#root .card-info__container_dish-name {
+  font-size: 24px;
+  margin: 30px;
+}
+#root .card-info__container_dish-description {
+  color: rgba(0, 0, 0, 0.44);
+  font-size: 14px;
+}
+#root .card-info__dish-ingredients {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+}
+#root .card-info__dish-ingredients_category-name {
+  font-size: 14px;
+  margin: 30px 30px 0 30px;
+}
+#root .card-info__dish-ingredients_img {
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.cards-container .card-wrapper {
+  width: 50%;
+  margin-bottom: 40px;
+  position: relative;
+}
+.cards-container .card-wrapper__dish-img {
+  width: 330px;
+  height: 200px;
+  background-size: cover;
+  border-radius: 30px;
+}
+.cards-container .card-wrapper__filter {
+  display: flex;
+  position: absolute;
+  bottom: 40px;
+  left: 20px;
+  margin-bottom: 9px;
+}
+.cards-container .card-wrapper__filter_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  min-width: 65px;
+  border-radius: 30px;
+  margin-right: 15px;
+}
+.cards-container .card-wrapper__dish-name {
+  color: #FFFFFF;
+  font-size: 18px;
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+}
+
+/*# sourceMappingURL=style.css.map */

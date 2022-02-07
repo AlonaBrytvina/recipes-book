@@ -1,0 +1,14 @@
+@import "montserrat.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  display: flex;
+  //height: 900px;
+  height: 1400px;
+  width: 1440px;
+}

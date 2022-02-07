@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  width: 60%;
+
+  &__category-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+    width: 100%;
+  }
+
+  &__main {
+    font-size: 36px;
+    color: #EBC060;
+  }
+
+  &__add {
+    display: flex;
+    align-items: center;
+    color: #E6AF33;
+    font-size: 24px;
+  }
+
+  &__icon {
+    margin-right: 25px;
+  }
+}
