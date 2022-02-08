@@ -30,14 +30,3 @@ export const MainHeader = () => {
     ])
   ])
 }
-// `
-//    <div class="header">
-//       <div class="header__category-name">
-//           <div class="header__main">FOOD</div>
-//           <div class="header__add">
-//               <img class="header__icon" src=${addCircle} alt="add circle">
-//               <span>Add new recipe</span>
-//           </div>
-//       </div>
-//   </div>
-// `;

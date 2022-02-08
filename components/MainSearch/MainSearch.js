@@ -17,13 +17,4 @@ export const MainSearch = () => {
       className: 'cards-container',
     }, recipes.map(CardRecipe))
   ])
-//   `
-//    <div class="search">
-//         <div class="search__name">SEARCH</div>
-//         <div class="cards-container">
-//             ${CardRecipe()}
-//         </div>
-//     </div>
-//
-// `;
 }

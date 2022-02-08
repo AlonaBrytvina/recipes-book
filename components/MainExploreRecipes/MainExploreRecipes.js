@@ -20,17 +20,4 @@ export const MainExploreRecipes = () => {
       className: 'cards-container'
     }, recipes.map(CardRecipe))
   ])
-  // return`
-   //  <div class="explore">
-   //      <div class="explore__name">EXPLORE RECIPES</div>
-   //      <div class="explore__filter-container">
-   //          ${MainFilter()}
-   //      </div>
-   //      <div class="cards-container">
-   //      ${CardRecipe()}
-   //      </div>
-   //  </div>
-   //
-   // </div>
-// `;
 }

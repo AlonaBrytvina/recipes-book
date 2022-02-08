@@ -3,11 +3,10 @@ import { recipes } from '../../api/recipes';
 import { ingredients } from '../../api/ingredients';
 import { el } from '../../utils/createElement';
 import { DishIngredients } from '../DishIngredients/DishIngredients';
+import bookmarkWhite from '../../assets/svg/bookmarkWhite.svg';
+import { viewRecipe } from '../../utils/viewRecipe';
 
 export const renderCardInfo = (recipe) => {
-  console.log(recipe)
-  const {imgUrl} = recipe;
-  console.log(imgUrl)
 
   return el('div', {
     className: 'card-info'
@@ -20,6 +19,17 @@ export const renderCardInfo = (recipe) => {
           url(${recipe.imgUrl})
           center / 100%`
     }),
+    el('div', {
+      className: 'card-info__icon-container',
+    }, [
+      el('img', {
+        className: 'card-info__icon',
+        img: {
+          src: `${bookmarkWhite}`,
+          alt: 'bookmarkWhite'
+        }
+      })
+    ]),
     el('div', {
       className: 'card-info-container'
     }, [
@@ -40,7 +50,8 @@ export const renderCardInfo = (recipe) => {
       }, recipe.ingredients.map(DishIngredients)
       ),
       el('div', {
-        className: 'card-info-container__button'
+        className: 'card-info-container__button',
+        onclick: () => viewRecipe(recipe),
       }, [
         el('span', {
           innerText: 'VIEW RECIPE'
@@ -48,36 +59,4 @@ export const renderCardInfo = (recipe) => {
       ])
     ])
   ])
-  // return`
-  //  <div class="card-info">
-  //       <div
-  //         style="background: center
-  //         linear-gradient(180deg, rgba(255, 255, 255, 0) 0%,
-  //         rgba(0, 0, 0, 0.71) 80.73%),
-  //         url(${recipes[0].imgUrl})
-  //         center / 100%"
-  //         class="card-info__img"
-  //     >
-  //      </div>
-  //      <div class="card-info-container">
-  //         <span class="card-info-container__dish-name">${recipes[0].name}</span>
-  //         <span class="card-info-container__dish-description">${recipes[0].description}</span>
-  //         <div class="card-info-container__category-name">Ingredients</div>
-  //         <div class="card-info-container__dish-ingredients">
-  //             ${recipes[0].ingredients.map(ingredientRecipe =>{
-  //               const findIngredient = ingredients.find(ingredient => ingredient.id === ingredientRecipe.id);
-  //               const findAmount = recipes[0].ingredients.find(ingredient => ingredient.id === ingredientRecipe.id);
-  //               return` <div class="dish-ingredients-wrapper">
-  //                             <img class="dish-ingredients-wrapper__img" src=${findIngredient.imgUrl}>
-  //                             <span class="dish-ingredients-wrapper__name">${findIngredient.name}</span>
-  //                             <span class="dish-ingredients-wrapper__amount">${findAmount.amount}pc</span>
-  //                          </div>`
-  //             }).join('')}
-  //         </div>
-  //         <div class="card-info-container__button">
-  //             <span>VIEW RECIPE</span>
-  //         </div>
-  //      </div>
-  //  <div>
-  // `;
 }

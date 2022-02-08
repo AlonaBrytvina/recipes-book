@@ -1,0 +1,95 @@
+.modal {
+
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .modal-window {
+    width: 800px;
+    height: 500px;
+    border-radius: 30px;
+    background-color: #fff;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100px;
+    }
+
+    &__title {
+      font-size: 24px;
+      margin: 30px 30px 15px 30px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    &__description {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    &__main {
+      display: flex;
+      justify-content: space-around;
+      height: 300px;
+      margin: 20px 0 60px;
+    }
+
+    &__img {
+      //height: 100%;
+      width: 350px;
+      background-color: white;
+      border-radius: 30px;
+      margin: 5px;
+    }
+
+    &__close{
+      font-size: 40px;
+      margin: 30px 30px 15px 30px;
+      cursor: pointer;
+    }
+
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .card-info-container__dish-ingredients {
+      display: flex;
+      align-items: start;
+      flex-direction: column;
+      overflow-y: scroll;
+      margin: 0 30px 0 30px;
+      padding: 0 30px 0 0;
+    }
+
+    .card-info-container__dish-ingredients::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    .card-info-container__dish-ingredients::-webkit-scrollbar-track {
+      background-color: #e4e4e4;
+      border-radius: 100px;
+    }
+
+    .card-info-container__dish-ingredients::-webkit-scrollbar-thumb {
+      border-radius: 30px;
+      background-image: linear-gradient(180deg, #F7E4BB 20%, #32AFA9 99%);
+      box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+    }
+  }
+}

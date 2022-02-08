@@ -1,3 +1,4 @@
+import './DishIngredients.scss';
 import { el } from '../../utils/createElement';
 import { ingredients } from '../../api/ingredients';
 

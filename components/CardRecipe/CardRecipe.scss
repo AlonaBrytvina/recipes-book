@@ -17,6 +17,7 @@
       height: 200px;
       position: relative;
       border-radius: 30px;
+      cursor: pointer;
     }
 
     &__filter {
@@ -35,6 +36,7 @@
       min-width: 65px;
       border-radius: 30px;
       margin-right: 15px;
+      cursor: pointer;
     }
 
     &__dish-name {
