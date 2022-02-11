@@ -1,12 +1,12 @@
 import './CardInfo.scss';
-import { recipes } from '../../api/recipes';
-import { ingredients } from '../../api/ingredients';
 import { el } from '../../utils/createElement';
 import { DishIngredients } from '../DishIngredients/DishIngredients';
 import bookmarkWhite from '../../assets/svg/bookmarkWhite.svg';
 import { viewRecipe } from '../../utils/viewRecipe';
+import { saveToBookmark } from '../../utils/saveToBookmark';
+import bookmark from '../../assets/svg/bookmark.svg';
 
-export const renderCardInfo = (recipe) => {
+export const renderCardInfo = ({recipe, isSelected}) => {
 
   return el('div', {
     className: 'card-info'
@@ -24,9 +24,10 @@ export const renderCardInfo = (recipe) => {
     }, [
       el('img', {
         className: 'card-info__icon',
+        onclick: () => saveToBookmark({recipe, isSelected: true}),
         img: {
-          src: `${bookmarkWhite}`,
-          alt: 'bookmarkWhite'
+          src: isSelected,
+          alt: 'bookmark'
         }
       })
     ]),
@@ -51,7 +52,7 @@ export const renderCardInfo = (recipe) => {
       ),
       el('div', {
         className: 'card-info-container__button',
-        onclick: () => viewRecipe(recipe),
+        onclick: () => viewRecipe({recipe, isOpen: true, isSelected: false}),
       }, [
         el('span', {
           innerText: 'VIEW RECIPE'

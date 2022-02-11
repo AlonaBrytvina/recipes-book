@@ -1,20 +1,34 @@
 .side-menu-container {
   background-color: #F7E4BB;
   width: 100px;
-  //height: 900px;
   height: 100%;
+
+
+  .menu-icon{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 10%;
+    cursor: pointer;
+  }
 
   .side-menu {
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    //height: 50%;
-    height: 30%;
+    height: 20%;
     cursor: pointer;
 
-    &__menu-icon {
+    &__spoon-fork-icon{
+      height: 90px;
+      display: flex;
+    }
 
+    &__bookmark-icon{
+      height: 90px;
+      display: flex;
     }
 
     &__selected {
