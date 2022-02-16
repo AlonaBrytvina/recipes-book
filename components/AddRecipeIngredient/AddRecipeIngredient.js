@@ -10,10 +10,6 @@ export const addRecipeIngredient = (ingredient) => {
       className: 'ingredient__input-label',
       innerText: `${ingredient.name}`
     }),
-    el('label', {
-      for: `${ingredient.id}`,
-      type: 'number',
-    }),
     el('input', {
       id: `${ingredient.id}`,
       className: 'ingredient__input-amount',

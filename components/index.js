@@ -8,10 +8,10 @@ import { MainSearch } from './MainSearch/MainSearch';
 import { MainExploreRecipes } from './MainExploreRecipes/MainExploreRecipes';
 import bookmark from '../assets/svg/bookmark.svg';
 import bookmarkWhite from '../assets/svg/bookmarkWhite.svg';
-import { fetchData } from '../api/fetchData';
-import { getData } from '../utils/getData';
+import { getData } from '../utils/getData'; //спросить как это работает, пери удаленнии ломается, при закомментированном виде работае
 
 export const renderAll = ({component, selectedItem, isOpenModal, isRecipeSelected, data}) => {
+  // console.log()
   const $container = document.querySelector('.container');
   console.log({component, selectedItem, isOpenModal, isRecipeSelected, data});
 
@@ -88,3 +88,6 @@ export const renderAll = ({component, selectedItem, isOpenModal, isRecipeSelecte
     renderMain(data),
   ]);
 };
+
+window.onload = () => getData();
+

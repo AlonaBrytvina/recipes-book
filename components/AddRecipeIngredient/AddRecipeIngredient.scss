@@ -1,6 +1,5 @@
 .ingredient{
   display: flex;
-  //align-items: self-start;
   margin: 0 5px 5px 0;
 
   &__input-label{
@@ -14,5 +13,6 @@
 
   &__input-amount{
     width: 30px;
+    height: 20px;
   }
 }

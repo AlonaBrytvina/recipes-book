@@ -2,9 +2,10 @@ import { postData } from '../api/postData';
 
 export const createRecipe = (event) => {
   event.preventDefault();
-  const {recipes} = JSON.parse(localStorage.getItem('db'));
 
+  const {recipes} = JSON.parse(localStorage.getItem('db'));
   const $inputName = document.querySelector('.modal__name').value;
+
   const $inputDescription = document.querySelector('.modal__description').value;
   const $inputUrl = document.querySelector('.modal__img').value;
 
@@ -18,17 +19,22 @@ export const createRecipe = (event) => {
   };
 
   const $inputCheckedValues = document.querySelectorAll('input[type=checkbox]:checked');
-
   const arrId = Array.from(document.querySelectorAll('input[type=number]'))
     .map(select => select.id);
+
 
   for (let i = 0; i < $inputCheckedValues.length; i++) {
 
     const id = arrId.find(number => number === $inputCheckedValues[i].id);
-    const amountIngredient = document.getElementById(`${id}`).value
+    const amountIngredient = document.getElementById(`${id}`).value;
 
-    obj.tags.push(Number(id));
-    obj.ingredients.push({id: +id, amount: +amountIngredient});
+    console.log(amountIngredient)
+
+    if(amountIngredient.length !== 0){
+      console.log(amountIngredient, id)
+      obj.tags.push(Number(id));
+      obj.ingredients.push({id: +id, amount: +amountIngredient});
+    }
   }
 
   const {name, description, imgUrl, tags, ingredients} = obj;

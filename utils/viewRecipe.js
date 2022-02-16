@@ -30,7 +30,6 @@ export const viewRecipe = (options) => {
     }
 
   } else {
-    console.log(isOpen, '2')
     for (let i = 0; i < $container.children.length; i++) {
 
       if ($container.children[i].className === 'modal') {

@@ -1,10 +1,7 @@
-import { renderAll } from '../components';
 import { renderAddRecipe } from '../components/AddRecipe/AddRecipe';
-import { postData } from '../api/postData';
 
 export const addRecipe = ({isModalOpen, create}) => {
   const $container = document.querySelector('.container');
-  console.log(isModalOpen, create)
 
   if(isModalOpen){
     $container.appendChild(renderAddRecipe())
