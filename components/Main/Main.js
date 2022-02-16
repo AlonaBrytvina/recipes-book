@@ -4,12 +4,12 @@ import { MainSearch } from '../MainSearch/MainSearch';
 import { MainExploreRecipes } from '../MainExploreRecipes/MainExploreRecipes';
 import { el } from '../../utils/createElement';
 
-export const renderMain = () => {
+export const renderMain = (data) => {
   return el('div', {
     className: 'main',
   }, [
     MainHeader(),
-    MainSearch(),
-    MainExploreRecipes()
-  ])
+    MainSearch(data),
+    MainExploreRecipes(data)
+  ]);
 };

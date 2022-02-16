@@ -1,8 +1,9 @@
 import './DishIngredients.scss';
 import { el } from '../../utils/createElement';
-import { ingredients } from '../../api/ingredients';
+import { getIngredients } from '../../utils/getIngredients';
 
 export const DishIngredients = ({id, amount}) => {
+  const ingredients = getIngredients();
   const findIngredient = ingredients.find(ingredient => ingredient.id === id);
 
   return el('div', {

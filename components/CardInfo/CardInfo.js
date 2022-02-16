@@ -1,13 +1,11 @@
 import './CardInfo.scss';
 import { el } from '../../utils/createElement';
 import { DishIngredients } from '../DishIngredients/DishIngredients';
-import bookmarkWhite from '../../assets/svg/bookmarkWhite.svg';
 import { viewRecipe } from '../../utils/viewRecipe';
 import { saveToBookmark } from '../../utils/saveToBookmark';
 import bookmark from '../../assets/svg/bookmark.svg';
 
 export const renderCardInfo = ({recipe, isSelected}) => {
-
   return el('div', {
     className: 'card-info'
   }, [
@@ -47,8 +45,8 @@ export const renderCardInfo = ({recipe, isSelected}) => {
         innerText: 'Ingredients'
       }),
       el('div', {
-        className: 'card-info-container__dish-ingredients',
-      }, recipe.ingredients.map(DishIngredients)
+          className: 'card-info-container__dish-ingredients',
+        }, recipe.ingredients.map(DishIngredients)
       ),
       el('div', {
         className: 'card-info-container__button',
@@ -59,5 +57,5 @@ export const renderCardInfo = ({recipe, isSelected}) => {
         })
       ])
     ])
-  ])
-}
+  ]);
+};

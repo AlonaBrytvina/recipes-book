@@ -2,22 +2,22 @@ import './MainExploreRecipes.scss';
 import { CardRecipe } from '../CardRecipe/CardRecipe';
 import { MainFilter } from '../MainFilter/MainFilter';
 import { el } from '../../utils/createElement';
-import { recipes } from '../../api/recipes';
-import { tags } from '../../api/tags';
+import { getTags } from '../../utils/getTags';
 
-export const MainExploreRecipes = () => {
- return el('div', {
+export const MainExploreRecipes = (data) => {
+  const tags = getTags();
+  return el('div', {
     className: 'explore'
   }, [
     el('div', {
       className: 'explore__name',
       innerText: 'EXPLORE RECIPES'
     }),
-    el('div',{
-    className: 'explore__filter-container'
+    el('div', {
+      className: 'explore__filter-container'
     }, tags.map(MainFilter)),
-    el('div',{
+    el('div', {
       className: 'cards-container'
-    }, recipes.map(CardRecipe))
-  ])
-}
+    }, data?.map(CardRecipe))
+  ]);
+};

@@ -1,6 +1,7 @@
 import './MainHeader.scss';
 import addCircle from '../../assets/svg/addCircle.svg';
 import { el } from '../../utils/createElement';
+import { addRecipe } from '../../utils/addRecipe';
 
 export const MainHeader = () => {
   return el('div', {
@@ -14,7 +15,8 @@ export const MainHeader = () => {
         innerText: 'FOOD'
       }),
       el('div', {
-        className: 'header__add'
+        className: 'header__add',
+        onclick: () => addRecipe({isModalOpen: true})
       }, [
         el('img', {
           className: 'header__icon',

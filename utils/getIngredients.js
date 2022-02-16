@@ -1,0 +1,1 @@
+export const getIngredients = () => JSON.parse(localStorage.getItem('db')).ingredients;

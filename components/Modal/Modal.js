@@ -7,7 +7,6 @@ import bookmark from '../../assets/svg/bookmark.svg';
 import { saveToBookmark } from '../../utils/saveToBookmark';
 
 export const renderModal = ({recipe, isSelected}) => {
-  console.log(isSelected);
   const {name, imgUrl, description} = recipe;
 
   return el('div', {
@@ -58,7 +57,7 @@ export const renderModal = ({recipe, isSelected}) => {
         }, [
           el('button', {
             className: 'footer__button-save',
-            innerText: 'Save',
+            innerText: 'Add to bookmark',
             onclick: () => saveToBookmark({recipe, isSelected: true, isOpenModal: true})
           }),
           el('button', {

@@ -1,0 +1,1 @@
+export const getTags = () => JSON.parse(localStorage.getItem('db')).tags;

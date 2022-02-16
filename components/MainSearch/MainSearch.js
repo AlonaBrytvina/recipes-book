@@ -1,11 +1,9 @@
 import './MainSearch.scss';
 import '../CardRecipe/CardRecipe.scss';
-
 import { CardRecipe } from '../CardRecipe/CardRecipe';
 import { el } from '../../utils/createElement';
-import { recipes } from '../../api/recipes';
 
-export const MainSearch = () => {
+export const MainSearch = (data) => {
   return el('div', {
     className: 'search'
   }, [
@@ -15,6 +13,6 @@ export const MainSearch = () => {
     }),
     el('div', {
       className: 'cards-container',
-    }, recipes.map(CardRecipe))
-  ])
-}
+    }, data?.map(CardRecipe))
+  ]);
+};
